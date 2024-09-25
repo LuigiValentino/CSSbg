@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    background-color: #1a1a1a; 
+    color: #fff; 
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; 
+    padding-bottom: 60px; 
+}
+
+.background-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px; 
+}
+
+.background-item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.background-item:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: #2c2c2c; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card h2 {
+    color: #fff;
+}
+
+.animated-bg {
+    animation: gradientAnimation 5s ease infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.copy-message {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000; 
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.copy-message.show {
+    opacity: 1;
+}
+
+.background-item.animated-hover {
+    transition: transform 0.3s ease;
+}
+
+.background-item.animated-hover:hover {
+    transform: scale(1.1);
+}
+
+.infinite-animation {
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.header {
+    text-align: center; 
+}
+
+.instructions {
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
